@@ -11,6 +11,9 @@ PImage StatisticsIcon;
 //A variable that displays the current selected screen
 int Screen = 0;
 
+//Variable that displays the users total current amount of points
+int PointCounter = 420;
+
 void setup() {
   size(400, 600);
   StressiLogo = loadImage("StressiLogo.png");

@@ -82,6 +82,13 @@ void menuButtons() {
   }
   //Image for Settings Button
   image (SettingsIcon, xM+300, yM);
+  //Point Counter Button + Text
+  fill(255);
+  rect(xM+300, yM-50, lM, hM);
+  fill(0);
+  textAlign(LEFT, TOP);
+  textSize(25);
+  text(PointCounter, xM+300, yM-50);
 }
 
 
