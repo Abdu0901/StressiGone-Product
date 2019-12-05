@@ -14,6 +14,9 @@ int Screen = 0;
 //Variable that displays the users total current amount of points
 int PointCounter = 420;
 
+//Color of the buttons
+int bRed = 0, bGreen = 166, bBlue = 255;
+
 void setup() {
   size(400, 600);
   StressiLogo = loadImage("StressiLogo.png");
