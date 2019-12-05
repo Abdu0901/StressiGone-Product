@@ -8,6 +8,7 @@ void SettingsScreen() {
   text("Settings", width/2, 0);
 
   //Dark Mode Box
+  stroke(255);
   fill(0);
   rect(width/2+50, 200-10, 50, 50);
   fill(bsDRed, bsDGreen, bsDBlue);
@@ -16,6 +17,7 @@ void SettingsScreen() {
   text("D", width/2+75, 200);  
 
   //Light Mode Box
+  stroke(0);
   fill(255);
   rect(width/2+100, 200-10, 50, 50);
   fill(bsLRed, bsLGreen, bsLBlue);
