@@ -1,31 +1,8 @@
-//Variables for the Start Screen Buttons
-int xS = 50;
-int yS = 250;
-int lS = 300;
-int hS = 100;
-
-//Variables for the Top Menu Buttons
+//Variables for the Small Buttons (Top Menu Buttons)
 int xM = 25;
 int yM = 60;
 int lM = 50;
 int hM = 30;
-
-void startScreenButtons() {
-  //Home Screen Button
-  stroke(strokeColor);
-  fill(bRed, bGreen, bBlue);
-  rect(xS, yS, lS, hS);
-  fill(textColor);
-  textAlign(BASELINE, BASELINE);
-  textSize(120);
-  text("Start", xS+5, yS+hS-5);
-  if (mouseX >= xS && mouseX <= xS+lS && mouseY >= yS && mouseY <= yS+hS) {
-    if (mousePressed) {
-      Screen = 1;
-      println("Start Button Clicked");
-    }
-  }
-}
 
 void menuButtons() {
   //Return to Start Screen Button
