@@ -1,14 +1,24 @@
 //Abdullah, Jens og Magnus StressiGone Project
 
 //Images used in the program
-PImage stressiLogo;
+PImage StressiLogo;
+PImage ReturnArrow;
+PImage HomeIcon;
+PImage ShopIcon;
+PImage SettingsIcon;
+PImage StatisticsIcon;
 
 //A variable that displays the current selected screen
 int Screen = 0;
 
 void setup() {
   size(400, 600);
-  stressiLogo = loadImage("StressiLogo.png");
+  StressiLogo = loadImage("StressiLogo.png");
+  ReturnArrow = loadImage("Return Arrow.png");
+  HomeIcon = loadImage("Home Icon.png");
+  ShopIcon = loadImage("Shop Icon.png");
+  SettingsIcon = loadImage("Settings Icon.png");
+  StatisticsIcon = loadImage("Statistics Icon.png");
 }
 
 void draw() {

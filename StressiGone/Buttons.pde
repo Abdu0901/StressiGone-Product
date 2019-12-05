@@ -35,6 +35,8 @@ void menuButtons() {
       println("Return Button Clicked");
     }
   }
+  //Image for Return Button
+  image (ReturnArrow, xM, yM-50);
   //Home Screen Button
   fill(255);
   rect(xM, yM, lM, hM);
@@ -44,6 +46,8 @@ void menuButtons() {
       println("Home Button Clicked");
     }
   }
+  //Image for Home Button
+  image (HomeIcon, xM, yM);
   //Statistics Screen Button
   fill(255);
   rect(xM+100, yM, lM, hM);
@@ -53,6 +57,8 @@ void menuButtons() {
       println("Statistics Button Clicked");
     }
   }
+  //Image for Statistics Button
+  image (StatisticsIcon, xM+100, yM);
   //Shop Screen Button
   fill(255);
   rect(xM+200, yM, lM, hM);
@@ -62,6 +68,8 @@ void menuButtons() {
       println("Shop Button Clicked");
     }
   }
+  //Image for Shop Button
+  image (ShopIcon, xM+200, yM);
   //Settings Screen Button
   fill(255);
   rect(xM+300, yM, lM, hM);
@@ -71,6 +79,8 @@ void menuButtons() {
       println("Settings Button Clicked");
     }
   }
+  //Image for Settings Button
+  image (SettingsIcon, xM+300, yM);
 }
 
 
