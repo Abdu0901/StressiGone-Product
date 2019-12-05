@@ -6,7 +6,7 @@ int hS = 100;
 
 //Variables for the Top Menu Buttons
 int xM = 25;
-int yM = 50;
+int yM = 60;
 int lM = 50;
 int hM = 30;
 
@@ -26,6 +26,15 @@ void startScreenButtons() {
 }
 
 void menuButtons() {
+  //Return to Start Screen Button
+  fill(255);
+  rect(xM, yM-50, lM, hM);
+  if (mouseX >= xM && mouseX <= xM+lM && mouseY >= yM-60 && mouseY <= yM-60+hM) {
+    if (mousePressed) {
+      Screen = 0;
+      println("Return Button Clicked");
+    }
+  }
   //Home Screen Button
   fill(255);
   rect(xM, yM, lM, hM);
