@@ -12,11 +12,16 @@ void setup() {
 }
 
 void draw() {
+  //Finds which screen active and draws it
   if (Screen == 0) {
     StartScreen();
   } else if (Screen == 1) {
     HomeScreen();
   } else if (Screen == 2) {
-    WorkOutSelectionScreen();
+    StatisticsScreen();
+  } else if (Screen == 3) {
+    ShopScreen();
+  } else if (Screen == 4) {
+    SettingsScreen();
   }
 }

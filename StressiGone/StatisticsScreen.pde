@@ -1,4 +1,4 @@
-void WorkOutSelectionScreen() {
+void StatisticsScreen() {
   Screen = 2;
   menuButtons();
 }

@@ -5,7 +5,7 @@ int lS = 300;
 int hS = 100;
 
 //Variables for the Top Menu Buttons
-int xM = 20;
+int xM = 25;
 int yM = 50;
 int lM = 50;
 int hM = 30;
@@ -26,9 +26,42 @@ void startScreenButtons() {
 }
 
 void menuButtons() {
-  //Start Button ()
+  //Home Screen Button
   fill(255);
   rect(xM, yM, lM, hM);
+  if (mouseX >= xM && mouseX <= xM+lM && mouseY >= yM && mouseY <= yM+hM) {
+    if (mousePressed) {
+      Screen = 1;
+      println("Home Button Clicked");
+    }
+  }
+  //Statistics Screen Button
+  fill(255);
+  rect(xM+100, yM, lM, hM);
+  if (mouseX >= xM+100 && mouseX <= xM+100+lM && mouseY >= yM && mouseY <= yM+hM) {
+    if (mousePressed) {
+      Screen = 2;
+      println("Statistics Button Clicked");
+    }
+  }
+  //Shop Screen Button
+  fill(255);
+  rect(xM+200, yM, lM, hM);
+  if (mouseX >= xM+200 && mouseX <= xM+200+lM && mouseY >= yM && mouseY <= yM+hM) {
+    if (mousePressed) {
+      Screen = 3;
+      println("Shop Button Clicked");
+    }
+  }
+  //Settings Screen Button
+  fill(255);
+  rect(xM+300, yM, lM, hM);
+  if (mouseX >= xM+300 && mouseX <= xM+300+lM && mouseY >= yM && mouseY <= yM+hM) {
+    if (mousePressed) {
+      Screen = 4;
+      println("Settings Button Clicked");
+    }
+  }
 }
 
 
