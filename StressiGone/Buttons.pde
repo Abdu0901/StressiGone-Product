@@ -14,7 +14,7 @@ void startScreenButtons() {
   //Home Screen Button
   fill(bRed, bGreen, bBlue);
   rect(xS, yS, lS, hS);
-  fill(0);
+  fill(textColor);
   textAlign(BASELINE, BASELINE);
   textSize(120);
   text("Start", xS+5, yS+hS-5);
@@ -85,19 +85,8 @@ void menuButtons() {
   //Point Counter Button + Text
   fill(bRed, bGreen, bBlue);
   rect(xM+300, yM-50, lM, hM);
-  fill(0);
+  fill(textColor);
   textAlign(LEFT, TOP);
   textSize(25);
   text(PointCounter, xM+300, yM-50);
 }
-
-
-
-/*
-class overclass {
- 
- //point
- 
- //basis for knap
- }
- */

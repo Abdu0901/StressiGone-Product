@@ -17,6 +17,16 @@ int PointCounter = 420;
 //Color of the buttons
 int bRed = 0, bGreen = 166, bBlue = 255;
 
+//Background Color
+int backGroundColor = 255;
+
+//Text Color
+int textColor = 0;
+
+//Color for the Brightness Setting Letters "L" and "D"
+int bsLRed = 0, bsLGreen = 255, bsLBlue = 0;
+int bsDRed = 255, bsDGreen = 0, bsDBlue = 0;
+
 void setup() {
   size(400, 600);
   StressiLogo = loadImage("StressiLogo.png");
