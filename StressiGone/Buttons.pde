@@ -15,6 +15,7 @@ void startScreenButtons() {
   fill(255);
   rect(xS, yS, lS, hS);
   fill(0);
+  textAlign(BASELINE, BASELINE);
   textSize(120);
   text("Start", xS+5, yS+hS-5);
   if (mouseX >= xS && mouseX <= xS+lS && mouseY >= yS && mouseY <= yS+hS) {
