@@ -49,6 +49,7 @@ void SettingsScreen() {
 void DarkMode() {
   backGroundColor = 0;
   textColor = 255;
+  strokeColor = 255;
 
   bsDRed = 0; 
   bsDGreen = 255; 
@@ -62,6 +63,7 @@ void DarkMode() {
 void LightMode() {
   backGroundColor = 255;
   textColor = 0;
+  strokeColor = 0;
 
   bsDRed = 255; 
   bsDGreen = 0; 

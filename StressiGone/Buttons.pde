@@ -12,6 +12,7 @@ int hM = 30;
 
 void startScreenButtons() {
   //Home Screen Button
+  stroke(strokeColor);
   fill(bRed, bGreen, bBlue);
   rect(xS, yS, lS, hS);
   fill(textColor);
@@ -28,6 +29,7 @@ void startScreenButtons() {
 
 void menuButtons() {
   //Return to Start Screen Button
+  stroke(strokeColor);
   fill(bRed, bGreen, bBlue);
   rect(xM, yM-50, lM, hM);
   if (mouseX >= xM && mouseX <= xM+lM && mouseY >= yM-50 && mouseY <= yM-50+hM) {
@@ -39,6 +41,7 @@ void menuButtons() {
   //Image for Return Button
   image (ReturnArrow, xM, yM-50);
   //Home Screen Button
+  stroke(strokeColor);
   fill(bRed, bGreen, bBlue);
   rect(xM, yM, lM, hM);
   if (mouseX >= xM && mouseX <= xM+lM && mouseY >= yM && mouseY <= yM+hM) {
@@ -50,6 +53,7 @@ void menuButtons() {
   //Image for Home Button
   image (HomeIcon, xM, yM);
   //Statistics Screen Button
+  stroke(strokeColor);
   fill(bRed, bGreen, bBlue);
   rect(xM+100, yM, lM, hM);
   if (mouseX >= xM+100 && mouseX <= xM+100+lM && mouseY >= yM && mouseY <= yM+hM) {
@@ -61,6 +65,7 @@ void menuButtons() {
   //Image for Statistics Button
   image (StatisticsIcon, xM+100, yM);
   //Shop Screen Button
+  stroke(strokeColor);
   fill(bRed, bGreen, bBlue);
   rect(xM+200, yM, lM, hM);
   if (mouseX >= xM+200 && mouseX <= xM+200+lM && mouseY >= yM && mouseY <= yM+hM) {
@@ -72,6 +77,7 @@ void menuButtons() {
   //Image for Shop Button
   image (ShopIcon, xM+200, yM);
   //Settings Screen Button
+  stroke(strokeColor);
   fill(bRed, bGreen, bBlue);
   rect(xM+300, yM, lM, hM);
   if (mouseX >= xM+300 && mouseX <= xM+300+lM && mouseY >= yM && mouseY <= yM+hM) {
@@ -84,6 +90,7 @@ void menuButtons() {
   image (SettingsIcon, xM+300, yM);
   //Point Counter Button + Text
   fill(bRed, bGreen, bBlue);
+  stroke(strokeColor);
   rect(xM+300, yM-50, lM, hM);
   fill(textColor);
   textAlign(LEFT, TOP);

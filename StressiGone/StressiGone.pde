@@ -23,6 +23,9 @@ int backGroundColor = 255;
 //Text Color
 int textColor = 0;
 
+//Stroke Color
+int strokeColor = 0;
+
 //Color for the Brightness Setting Letters "L" and "D"
 int bsLRed = 0, bsLGreen = 255, bsLBlue = 0;
 int bsDRed = 255, bsDGreen = 0, bsDBlue = 0;
