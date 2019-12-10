@@ -8,6 +8,8 @@ void menuButtons() {
   //Return to Start Screen Button
   stroke(strokeColor);
   fill(bRed, bGreen, bBlue);
+  line(0,55,400,55);
+  line(0,95,400,95);
   rect(xM, yM-50, lM, hM);
   if (mouseX >= xM && mouseX <= xM+lM && mouseY >= yM-50 && mouseY <= yM-50+hM) {
     if (mousePressed) {
