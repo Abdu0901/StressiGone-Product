@@ -18,12 +18,7 @@ void StartScreen() {
   textAlign(BASELINE, BASELINE);
   textSize(120);
   text("Start", xS+5, yS+hS-5);
-  if (mouseX >= xS && mouseX <= xS+lS && mouseY >= yS && mouseY <= yS+hS) {
-    if (mousePressed) {
-      Screen = 1;
-      println("Start Button Clicked");
-    }
-  }
+
   //Settings Screen Button
   stroke(strokeColor);
   fill(bRed, bGreen, bBlue);
@@ -32,10 +27,18 @@ void StartScreen() {
   textAlign(BASELINE, BASELINE);
   textSize(75);
   text("Settings", xS+5, yS+150+hS-20);
+}
+void StartScreenButtonsReleased() {
   if (mouseX >= xS && mouseX <= xS+lS && mouseY >= yS+150 && mouseY <= yS+150+hS) {
-    if (mousePressed) {
+  //  if (mousePressed) {
       Screen = 4;
       println("Settings Button Clicked");
-    }
+   // }
+  }
+    if (mouseX >= xS && mouseX <= xS+lS && mouseY >= yS && mouseY <= yS+hS) {
+    //if (mousePressed) {
+      Screen = 1;
+      println("Start Button Clicked");
+   // }
   }
 }

@@ -38,6 +38,7 @@ void setup() {
   ShopIcon = loadImage("Shop Icon.png");
   SettingsIcon = loadImage("Settings Icon.png");
   StatisticsIcon = loadImage("Statistics Icon.png");
+
 }
 
 void draw() {
@@ -55,4 +56,14 @@ void draw() {
   } else if (Screen == 5) {
     WorkOutSelection();
   }
+}
+
+void mouseReleased(){
+ if(Screen == 0) {
+   StartScreenButtonsReleased();
+ }
+ if(Screen == 1){
+  HomeScreenButtonsReleased(); 
+ }
+  
 }
