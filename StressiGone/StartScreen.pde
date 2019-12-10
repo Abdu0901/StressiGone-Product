@@ -28,6 +28,7 @@ void StartScreen() {
   textSize(75);
   text("Settings", xS+5, yS+150+hS-20);
 }
+
 void StartScreenButtonsReleased() {
   if (mouseX >= xS && mouseX <= xS+lS && mouseY >= yS+150 && mouseY <= yS+150+hS) {
   //  if (mousePressed) {
