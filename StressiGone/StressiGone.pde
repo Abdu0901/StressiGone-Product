@@ -52,5 +52,7 @@ void draw() {
     ShopScreen();
   } else if (Screen == 4) {
     SettingsScreen();
+  } else if (Screen == 5) {
+    WorkOutSelection();
   }
 }
