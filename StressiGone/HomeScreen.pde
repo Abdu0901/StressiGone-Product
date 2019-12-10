@@ -15,7 +15,7 @@ void HomeScreen() {
   text("<5 min", xS+5, 175+hS-25);
   if (mouseX >= xS && mouseX <= xS+lS && mouseY >= 175 && mouseY <= 175+hS) {
     if (mousePressed) {
-      //Screen = (indsætskærm);
+      Screen = 5;
       println("5 min clicked");
     }
   }
@@ -28,7 +28,7 @@ void HomeScreen() {
   text("5-15 min", xS+5, 300+hS-25);
   if (mouseX >= xS && mouseX <= xS+lS && mouseY >= 300 && mouseY <= 300+hS) {
     if (mousePressed) {
-      //Screen = (indsætskærm);
+      Screen = 5;
       println("10 min clicked");
     }
   }
@@ -40,7 +40,7 @@ void HomeScreen() {
   text(">15 min", xS+5, 425+hS-25);
   if (mouseX >= xS && mouseX <= xS+lS && mouseY >= 425 && mouseY <= 425+hS) {
     if (mousePressed) {
-      //Screen = (indsætskærm);
+      Screen = 5;
       println("15 min clicked");
     }
   }

@@ -4,6 +4,6 @@ void WorkOutSelection() {
   menuButtons();
   fill(textColor);
   textAlign(CENTER, TOP);
-  textSize(50);
-  text("WorkOut Selection", width/2, 0);
+  textSize(25);
+  text("WorkOut Selection", width/2, 13);
 }
