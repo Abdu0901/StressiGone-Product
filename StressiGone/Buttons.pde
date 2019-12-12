@@ -5,12 +5,14 @@ int lM = 50;
 int hM = 30;
 
 void menuButtons() {
-  //Return to Start Screen Button
+  //Top Menu Lines
   stroke(strokeColor);
   fill(bRed, bGreen, bBlue);
-  line(0,55,400,55);
-  line(0,95,400,95);
-  rect(xM, yM-50, lM, hM);
+  line(0, 55, 400, 55);
+  line(0, 95, 400, 95);
+  //ReturnButton
+  returnButton = new Button(xM, yM-50, lM, hM, strokeColor, "", 1, 0, bRed, bGreen, bBlue);
+  returnButton.ButtonUpdate();
   if (mouseX >= xM && mouseX <= xM+lM && mouseY >= yM-50 && mouseY <= yM-50+hM) {
     if (mousePressed) {
       Screen = 0;
@@ -19,10 +21,11 @@ void menuButtons() {
   }
   //Image for Return Button
   image (ReturnArrow, xM, yM-50);
+
   //Home Screen Button
-  stroke(strokeColor);
-  fill(bRed, bGreen, bBlue);
-  rect(xM, yM, lM, hM);
+  //stroke(strokeColor);
+  homeButton = new Button(xM, yM, lM, hM, strokeColor, "", 1, 0, bRed, bGreen, bBlue);
+  homeButton.ButtonUpdate();
   if (mouseX >= xM && mouseX <= xM+lM && mouseY >= yM && mouseY <= yM+hM) {
     if (mousePressed) {
       Screen = 1;

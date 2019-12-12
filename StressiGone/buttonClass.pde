@@ -9,11 +9,12 @@ class Button {
   boolean buttonPressed;
   String buttonText;
 
-  Button(int xPos, int yPos, int wSize, int hSize, String buttonText, int textSize, int textAlign, int bRed, int bGreen, int bBlue) {
+  Button(int xPos, int yPos, int wSize, int hSize, int strokeColor, String buttonText, int textSize, int textAlign, int bRed, int bGreen, int bBlue) {
     this.xPos = xPos;
     this.yPos = yPos;
     this.wSize = wSize;
     this.hSize = hSize;
+    this.strokeColor = strokeColor;
     ctextColor = textColor;
     this.buttonText = buttonText;
     this.textSize = textSize;
@@ -25,6 +26,7 @@ class Button {
   }
 
   void ButtonUpdate() {
+    stroke(strokeColor);
     fill(bRed, bGreen, bBlue);
     rect(xPos, yPos, wSize, hSize);
     textSize(textSize);

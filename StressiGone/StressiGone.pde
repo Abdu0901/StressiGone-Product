@@ -32,7 +32,11 @@ int bsDRed = 255, bsDGreen = 0, bsDBlue = 0;
 
 boolean darkMode = false;
 
+//Define name of buttons here
 Button settings;
+Button startButton;
+Button returnButton;
+Button homeButton;
 
 void setup() {
   size(400, 600);
@@ -42,7 +46,6 @@ void setup() {
   ShopIcon = loadImage("Shop Icon.png");
   SettingsIcon = loadImage("Settings Icon.png");
   StatisticsIcon = loadImage("Statistics Icon.png");
-  
 }
 
 void draw() {

@@ -10,16 +10,11 @@ void StartScreen() {
   //Logo
   StressiLogo.resize(400, 200);
   image (StressiLogo, 0, 0);
-  //Home Screen Button
-  stroke(strokeColor);
-  fill(bRed, bGreen, bBlue);
-  rect(xS, yS, lS, hS);
-  fill(textColor);
-  textAlign(BASELINE, BASELINE);
-  textSize(120);
-  text("Start", xS+5, yS+hS-5);
-
-  settings = new Button(50, 400, 300, 100, "Settings", 75, 0, bRed, bGreen, bBlue);
+  //StartButton
+  startButton = new Button(xS, yS, lS, hS, strokeColor, "Start", 100, 0, bRed, bGreen, bBlue);
+  startButton.ButtonUpdate();
+  //SettingsButton
+  settings = new Button(xS, yS+150, lS, hS, strokeColor, "Settings", 75, 0, bRed, bGreen, bBlue);
   settings.ButtonUpdate();
 }
 
