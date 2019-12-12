@@ -19,16 +19,7 @@ void StartScreen() {
   textSize(120);
   text("Start", xS+5, yS+hS-5);
 
-  /*
-  //Settings Screen Button
-   stroke(strokeColor);
-   fill(bRed, bGreen, bBlue);
-   rect(xS, yS+150, lS, hS);
-   fill(textColor);
-   textAlign(BASELINE, BASELINE);
-   textSize(75);
-   text("Settings", xS+5, yS+150+hS-20);
-   */
+  settings = new Button(50, 400, 300, 100, "Settings", 75, 0, bRed, bGreen, bBlue);
   settings.ButtonUpdate();
 }
 
