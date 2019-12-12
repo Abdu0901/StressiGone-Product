@@ -30,6 +30,10 @@ int strokeColor = 0;
 int bsLRed = 0, bsLGreen = 255, bsLBlue = 0;
 int bsDRed = 255, bsDGreen = 0, bsDBlue = 0;
 
+boolean darkMode = false;
+
+Button settings;
+
 void setup() {
   size(400, 600);
   StressiLogo = loadImage("StressiLogo.png");
@@ -38,7 +42,7 @@ void setup() {
   ShopIcon = loadImage("Shop Icon.png");
   SettingsIcon = loadImage("Settings Icon.png");
   StatisticsIcon = loadImage("Statistics Icon.png");
-
+  settings = new Button(50, 400, 300, 100, "Settings", 75, 0, bRed, bGreen, bBlue);
 }
 
 void draw() {
@@ -58,12 +62,11 @@ void draw() {
   }
 }
 
-void mouseReleased(){
- if(Screen == 0) {
-   StartScreenButtonsReleased();
- }
- if(Screen == 1){
-  HomeScreenButtonsReleased(); 
- }
-  
+void mouseReleased() {
+  if (Screen == 0) {
+    StartScreenButtonsReleased();
+  }
+  if (Screen == 1) {
+    HomeScreenButtonsReleased();
+  }
 }
