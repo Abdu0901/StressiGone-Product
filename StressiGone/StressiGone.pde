@@ -12,7 +12,7 @@ PImage StatisticsIcon;
 int Screen = 0;
 
 //Variable that displays the users total current amount of points
-int PointCounter = 420;
+int PointCounter = 0;
 
 //Color of the buttons
 int bRed = 0, bGreen = 166, bBlue = 255;
@@ -35,8 +35,12 @@ boolean darkMode = false;
 //Define name of buttons here
 Button settings;
 Button startButton;
-Button returnButton;
-Button homeButton;
+Button returnIconButton;
+Button homeIconButton;
+Button statisticsIconButton;
+Button shopIconButton;
+Button settingsIconButton;
+Button pointCounterButton;
 
 void setup() {
   size(400, 600);
