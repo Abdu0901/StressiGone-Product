@@ -41,6 +41,9 @@ Button statisticsIconButton;
 Button shopIconButton;
 Button settingsIconButton;
 Button pointCounterButton;
+Button lessThanFiveButton;
+Button fiveToFifteenButton;
+Button overFifteenButton;
 
 void setup() {
   size(400, 600);
