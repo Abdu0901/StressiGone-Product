@@ -4,6 +4,9 @@ int yS = 250;
 int lS = 300;
 int hS = 100;
 
+Button settings;
+Button startButton;
+
 void StartScreen() {
   Screen = 0;
   background (backGroundColor);
@@ -13,23 +16,15 @@ void StartScreen() {
   //StartButton
   startButton = new Button(xS, yS, lS, hS, strokeColor, "Start", 100, 0, bRed, bGreen, bBlue);
   startButton.ButtonUpdate();
+  if (startButton.isButtonPressed(mouseX, mouseY, mousePressed, startButton) == true) {
+    Screen = 1;
+    println("Start Button Clicked");
+  }
   //SettingsButton
   settings = new Button(xS, yS+150, lS, hS, strokeColor, "Settings", 75, 0, bRed, bGreen, bBlue);
   settings.ButtonUpdate();
-}
-
-void StartScreenButtonsReleased() {
-  if (mouseX >= xS && mouseX <= xS+lS && mouseY >= yS+150 && mouseY <= yS+150+hS) {
-    //  if (mousePressed) {
+  if (settings.isButtonPressed(mouseX, mouseY, mousePressed, settings) == true) {
     Screen = 4;
     println("Settings Button Clicked");
-    // }
-  }
-
-  if (mouseX >= xS && mouseX <= xS+lS && mouseY >= yS && mouseY <= yS+hS) {
-    //if (mousePressed) {
-    Screen = 1;
-    println("Start Button Clicked");
-    // }
   }
 }

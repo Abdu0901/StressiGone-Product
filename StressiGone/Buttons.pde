@@ -4,6 +4,13 @@ int yM = 60;
 int lM = 50;
 int hM = 30;
 
+Button returnIconButton;
+Button homeIconButton;
+Button statisticsIconButton;
+Button shopIconButton;
+Button settingsIconButton;
+Button pointCounterButton;
+
 void menuButtons() {
   //Top Menu Lines
   stroke(strokeColor);
@@ -13,11 +20,9 @@ void menuButtons() {
   //ReturnButton
   returnIconButton = new Button(xM, yM-50, lM, hM, strokeColor, "", 1, 0, bRed, bGreen, bBlue);
   returnIconButton.ButtonUpdate();
-  if (mouseX >= xM && mouseX <= xM+lM && mouseY >= yM-50 && mouseY <= yM-50+hM) {
-    if (mousePressed) {
-      Screen = 0;
-      println("Return Button Clicked");
-    }
+  if (returnIconButton.isButtonPressed(mouseX, mouseY, mousePressed, returnIconButton) == true) {
+    println("Return Button Clicked");
+    Screen = 0;
   }
   //Image for Return Button
   image (ReturnArrow, xM, yM-50);
@@ -25,11 +30,9 @@ void menuButtons() {
   //Home Screen Button
   homeIconButton = new Button(xM, yM, lM, hM, strokeColor, "", 1, 0, bRed, bGreen, bBlue);
   homeIconButton.ButtonUpdate();
-  if (mouseX >= xM && mouseX <= xM+lM && mouseY >= yM && mouseY <= yM+hM) {
-    if (mousePressed) {
-      Screen = 1;
-      println("Home Button Clicked");
-    }
+  if (homeIconButton.isButtonPressed(mouseX, mouseY, mousePressed, homeIconButton) == true) {
+    println("Home Button Clicked");
+    Screen = 1;
   }
   //Image for Home Button
   image (HomeIcon, xM, yM);
@@ -37,11 +40,9 @@ void menuButtons() {
   //Statistics Screen Button
   statisticsIconButton = new Button(xM+100, yM, lM, hM, strokeColor, "", 1, 0, bRed, bGreen, bBlue);
   statisticsIconButton.ButtonUpdate();
-  if (mouseX >= xM+100 && mouseX <= xM+100+lM && mouseY >= yM && mouseY <= yM+hM) {
-    if (mousePressed) {
-      Screen = 2;
-      println("Statistics Button Clicked");
-    }
+  if (statisticsIconButton.isButtonPressed(mouseX, mouseY, mousePressed, statisticsIconButton) == true) {
+    println("Statistics Button Clicked");
+    Screen = 2;
   }
   //Image for Statistics Button
   image (StatisticsIcon, xM+100, yM);
@@ -49,11 +50,9 @@ void menuButtons() {
   //Shop Screen Button
   shopIconButton = new Button(xM+200, yM, lM, hM, strokeColor, "", 1, 0, bRed, bGreen, bBlue);
   shopIconButton.ButtonUpdate();
-  if (mouseX >= xM+200 && mouseX <= xM+200+lM && mouseY >= yM && mouseY <= yM+hM) {
-    if (mousePressed) {
-      Screen = 3;
-      println("Shop Button Clicked");
-    }
+  if (shopIconButton.isButtonPressed(mouseX, mouseY, mousePressed, shopIconButton) == true) {
+    println("Shop Button Clicked");
+    Screen = 3;
   }
   //Image for Shop Button
   image (ShopIcon, xM+200, yM);
@@ -61,11 +60,9 @@ void menuButtons() {
   //Settings Screen Button
   settingsIconButton = new Button(xM+300, yM, lM, hM, strokeColor, "", 1, 0, bRed, bGreen, bBlue);
   settingsIconButton.ButtonUpdate();
-  if (mouseX >= xM+300 && mouseX <= xM+300+lM && mouseY >= yM && mouseY <= yM+hM) {
-    if (mousePressed) {
-      Screen = 4;
-      println("Settings Button Clicked");
-    }
+  if (settingsIconButton.isButtonPressed(mouseX, mouseY, mousePressed, settingsIconButton) == true) {
+    println("Settings Button Clicked");
+    Screen = 4;
   }
   //Image for Settings Button
   image (SettingsIcon, xM+300, yM);

@@ -1,3 +1,12 @@
+Button darkModeBox;
+Button lightModeBox;
+Button blueThemeBox;
+Button greenThemeBox;
+Button violetThemeBox;
+Button pinkThemeBox;
+Button greyThemeBox;
+Button yellowThemeBox;
+
 void SettingsScreen() {
   Screen = 4;
   background (backGroundColor);
@@ -8,42 +17,27 @@ void SettingsScreen() {
   text("Settings", width/2, 0);
 
   //Dark Mode Box
-  stroke(255);
-  fill(0);
-  rect(width/2+50, 200-10, 50, 50);
-  fill(bsDRed, bsDGreen, bsDBlue);
-  textAlign(CENTER, TOP);
-  textSize(30);
-  text("D", width/2+75, 200);  
+  darkModeBox = new Button(width/2+50, 200-10, 50, 50, strokeColor, "D", 30, 0, bsDRed, bsDGreen, bsDBlue);
+  darkModeBox.ButtonUpdate();
+  if (darkModeBox.isButtonPressed(mouseX, mouseY, mousePressed, darkModeBox) == true) {
+    DarkMode();
+    println("Dark Mode Enabled");
+  }
 
   //Light Mode Box
-  stroke(0);
-  fill(255);
-  rect(width/2+100, 200-10, 50, 50);
-  fill(bsLRed, bsLGreen, bsLBlue);
-  textAlign(CENTER, TOP);
-  textSize(30);
-  text("L", width/2+130, 200);  
+  lightModeBox = new Button(width/2+100, 200-10, 50, 50, strokeColor, "L", 30, 0, bsLRed, bsLGreen, bsLBlue);
+  lightModeBox.ButtonUpdate();
+  if (lightModeBox.isButtonPressed(mouseX, mouseY, mousePressed, lightModeBox) == true) {
+    LightMode();
+    println("Light Mode Enabled");
+  }
 
   //Brightness Mode Text
   fill(textColor);
   textAlign(LEFT, TOP);
   textSize(30);
   text("Brightness Mode", 0, 200);
-  //Changes Brightness Settings to Dark Mode
-  if (mouseX >= width/2+50 && mouseX <= width/2+50+50 && mouseY >= 200-10 && mouseY <= 200-10+50) {
-    if (mousePressed) {
-      DarkMode();
-      println("Dark Mode Enabled");
-    }
-  }
-  //Changes Brightness Settings to Light Mode
-  if (mouseX >= width/2+100 && mouseX <= width/2+100+50 && mouseY >= 200-10 && mouseY <= 200-10+50) {
-    if (mousePressed) {
-      LightMode();
-      println("Light Mode Enabled");
-    }
-  }
+
   //Theme Selection Function
   fill(textColor);
   textAlign(LEFT, TOP);
@@ -51,68 +45,53 @@ void SettingsScreen() {
   text("Theme Selection:", 0, 250);
 
   //Blue Theme Box
-  stroke(strokeColor);
-  fill(0, 166, 255);
-  rect(20, 300, 50, 50);
-  if (mouseX >= 20 && mouseX <= 20+50 && mouseY >= 300 && mouseY <= 300+50) {
-    if (mousePressed) {
-      BlueTheme();
-      println("BlueTheme Enabled");
-    }
+  blueThemeBox = new Button(20, 300, 50, 50, strokeColor, "", 1, 0, 0, 166, 255);
+  blueThemeBox.ButtonUpdate();
+  if (blueThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, blueThemeBox) == true) {
+    BlueTheme();
+    println("BlueTheme Enabled");
   }
+
   //Green Theme Box
-  stroke(strokeColor);
-  fill(0, 255, 0);
-  rect(82, 300, 50, 50);
-  if (mouseX >= 82 && mouseX <= 82+50 && mouseY >= 300 && mouseY <= 300+50) {
-    if (mousePressed) {
-      GreenTheme();
-      println("GreenTheme Enabled");
-    }
+  greenThemeBox = new Button(82, 300, 50, 50, strokeColor, "", 1, 0, 0, 255, 0);
+  greenThemeBox.ButtonUpdate();
+  if (greenThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, greenThemeBox) == true) {
+    GreenTheme();
+    println("GreenTheme Enabled");
   }
+
   //Violet Theme Box
-  stroke(strokeColor);
-  fill(238, 130, 238);
-  rect(144, 300, 50, 50);
-  if (mouseX >= 144 && mouseX <= 144+50 && mouseY >= 300 && mouseY <= 300+50) {
-    if (mousePressed) {
-      VioletTheme();
-      println("VioletTheme Enabled");
-    }
+  violetThemeBox = new Button(144, 300, 50, 50, strokeColor, "", 1, 0, 238, 130, 238);
+  violetThemeBox.ButtonUpdate();
+  if (violetThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, violetThemeBox) == true) {
+    VioletTheme();
+    println("VioletTheme Enabled");
   }
+
   //Pink Theme Box
-  stroke(strokeColor);
-  fill(255, 105, 180);
-  rect(206, 300, 50, 50);
-  if (mouseX >= 206 && mouseX <= 206+50 && mouseY >= 300 && mouseY <= 300+50) {
-    if (mousePressed) {
-      PinkTheme();
-      println("PinkTheme Enabled");
-    }
+  pinkThemeBox = new Button(206, 300, 50, 50, strokeColor, "", 1, 0, 255, 105, 180);
+  pinkThemeBox.ButtonUpdate();
+  if (pinkThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, pinkThemeBox) == true) {
+    PinkTheme();
+    println("PinkTheme Enabled");
   }
+
   //Grey Theme Box
-  stroke(strokeColor);
-  fill(211, 211, 211);
-  rect(268, 300, 50, 50);
-  if (mouseX >= 268 && mouseX <= 268+50 && mouseY >= 300 && mouseY <= 300+50) {
-    if (mousePressed) {
-      GreyTheme();
-      println("GreyTheme Enabled");
-    }
+  greyThemeBox = new Button(268, 300, 50, 50, strokeColor, "", 1, 0, 211, 211, 211);
+  greyThemeBox.ButtonUpdate();
+  if (greyThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, greyThemeBox) == true) {
+    GreyTheme();
+    println("GreyTheme Enabled");
   }
+
   //Yellow Theme Box
-  stroke(strokeColor);
-  fill(255, 255, 0);
-  rect(330, 300, 50, 50);
-  if (mouseX >= 330 && mouseX <= 330+50 && mouseY >= 300 && mouseY <= 300+50) {
-    if (mousePressed) {
-      YellowTheme();
-      println("YellowTheme Enabled");
-    }
+  yellowThemeBox = new Button(330, 300, 50, 50, strokeColor, "", 1, 0, 255, 255, 0);
+  yellowThemeBox.ButtonUpdate();
+  if (yellowThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, yellowThemeBox) == true) {
+    YellowTheme();
+    println("YellowTheme Enabled");
   }
 }
-
-//bRed = 0, bGreen = 166, bBlue = 255;
 
 void DarkMode() {
   //Makes background dark and text + stroke light

@@ -1,3 +1,10 @@
+Button shoesButton;
+Button glasesButton;
+Button glovesButton;
+Button hatsButton;
+Button shirtsButton;
+Button pantsButton;
+
 void ShopScreen() {
   Screen = 3;
   background (backGroundColor);
@@ -7,80 +14,39 @@ void ShopScreen() {
   textSize(50);
   text("Shop", width/2, 0);
 
-  fill(bRed, bGreen, bBlue);
-  rect(xS/2, 500, lS/2, hS/2);
-  fill(textColor);
-  textAlign(BASELINE, BASELINE);
-  textSize(45);
-  text("Shoes", xS-20, 440+hS);
-  if (mouseX >= xS/2 && mouseX <= xS+lS/2 && mouseY >= 500 && mouseY <= 500+hS/2) {
-    if (mousePressed) {
-      //Screen = (indsæt skærm);
-      println("Shoes Button Clicked");
-    }
+  shoesButton = new Button(xS/2, 500, lS/2, hS/2, strokeColor, "Shoes", 45, 0, bRed, bGreen, bBlue);
+  shoesButton.ButtonUpdate();
+  if (shoesButton.isButtonPressed(mouseX, mouseY, mousePressed, shoesButton) == true) {
+    println("Shoes Button Clicked");
   }
 
-  fill(bRed, bGreen, bBlue);
-  rect(xS+170, 500, lS/2, hS/2);
-  fill(textColor);
-  textAlign(BASELINE, BASELINE);
-  textSize(45);
-  text("Glases", xS+175, 440+hS);
-  if (mouseX >= xS+170 && mouseX <= xS+170+lS/2 && mouseY >= 500 && mouseY <= 500+hS/2) {
-    if (mousePressed) {
-      //Screen = (indsæt skærm);
-      println("Glases Button Clicked");
-    }
+  glasesButton = new Button(xS+170, 500, lS/2, hS/2, strokeColor, "Glases", 45, 0, bRed, bGreen, bBlue);
+  glasesButton.ButtonUpdate();
+  if (glasesButton.isButtonPressed(mouseX, mouseY, mousePressed, glasesButton) == true) {
+    println("Glases Button Clicked");
   }
 
-  fill(bRed, bGreen, bBlue);
-  rect(xS+170, 425, lS/2, hS/2);
-  fill(textColor);
-  textAlign(BASELINE, BASELINE);
-  textSize(45);
-  text("Gloves", xS+175, 365+hS);
-  if (mouseX >= xS+170 && mouseX <= xS+170+lS/2 && mouseY >= 425 && mouseY <= 425+hS/2) {
-    if (mousePressed) {
-      //Screen = (indsæt skærm);
-      println("Gloves Button Clicked");
-    }
+  glovesButton = new Button(xS+170, 425, lS/2, hS/2, strokeColor, "Gloves", 45, 0, bRed, bGreen, bBlue);
+  glovesButton.ButtonUpdate();
+  if (glovesButton.isButtonPressed(mouseX, mouseY, mousePressed, glovesButton) == true) {
+    println("Gloves Button Clicked");
   }
-  
-  fill(bRed, bGreen, bBlue);
-  rect(xS/2, 425, lS/2, hS/2);
-  fill(textColor);
-  textAlign(BASELINE, BASELINE);
-  textSize(45);
-  text("Pants", xS-20, 365+hS);
-  if (mouseX >= xS/2 && mouseX <= xS/2+lS/2 && mouseY >= 425 && mouseY <= 425+hS/2) {
-    if (mousePressed) {
-      //Screen = (indsæt skærm);
-      println("Pants Button Clicked");
-    }
+
+  pantsButton = new Button(xS/2, 425, lS/2, hS/2, strokeColor, "Pants", 45, 0, bRed, bGreen, bBlue);
+  pantsButton.ButtonUpdate();
+  if (pantsButton.isButtonPressed(mouseX, mouseY, mousePressed, pantsButton) == true) {
+    println("Pants Button Clicked");
   }
-  
-  fill(bRed, bGreen, bBlue);
-  rect(xS/2, 350, lS/2, hS/2);
-  fill(textColor);
-  textAlign(BASELINE, BASELINE);
-  textSize(45);
-  text("Hats", xS-20, 290+hS);
-  if (mouseX >= xS/2 && mouseX <= xS/2+lS/2 && mouseY >= 350 && mouseY <= 350+hS/2) {
-    if (mousePressed) {
-      //Screen = (indsæt skærm);
-      println("Hats Button Clicked");
-    }
+
+  hatsButton = new Button(xS/2, 350, lS/2, hS/2, strokeColor, "Hats", 45, 0, bRed, bGreen, bBlue);
+  hatsButton.ButtonUpdate();
+  if (hatsButton.isButtonPressed(mouseX, mouseY, mousePressed, hatsButton) == true) {
+    println("Hats Button Clicked");
   }
-  fill(bRed, bGreen, bBlue);
-  rect(xS+170, 350, lS/2, hS/2);
-  fill(textColor);
-  textAlign(BASELINE, BASELINE);
-  textSize(45);
-  text("Shirts", xS+175, 290+hS);
-  if (mouseX >= xS+170 && mouseX <= xS+170+lS/2 && mouseY >= 350 && mouseY <= 350+hS/2) {
-    if (mousePressed) {
-      //Screen = (indsæt skærm);
-      println("Shirts Button Clicked");
-    }
+
+  shirtsButton = new Button(xS+170, 350, lS/2, hS/2, strokeColor, "Shirts", 45, 0, bRed, bGreen, bBlue);
+  shirtsButton.ButtonUpdate();
+  if (shirtsButton.isButtonPressed(mouseX, mouseY, mousePressed, shirtsButton) == true) {
+    println("Shirts Button Clicked");
   }
 }

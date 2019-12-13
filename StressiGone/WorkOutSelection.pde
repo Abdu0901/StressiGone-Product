@@ -1,3 +1,6 @@
+Button runButton;
+Button yogaButton;
+
 void WorkOutSelection() {
   Screen = 5;
   background (backGroundColor);
@@ -6,30 +9,18 @@ void WorkOutSelection() {
   textAlign(CENTER, TOP);
   textSize(25);
   text("WorkOut Selection", width/2, 13);
-  
-  fill(bRed, bGreen, bBlue);
-  rect(xS+200, hS+50, lS/2-30, hS/2);
-  fill(textColor);
-  textAlign(BASELINE, BASELINE);
-  textSize(45);
-  text("Løb", xS+205, 90+hS);
-  if (mouseX >= xS+200 && mouseX <= xS+200+lS/2-30 && mouseY >= hS+50 && mouseY <= hS+50+hS/2) {
-    if (mousePressed) {
-      //Screen = (indsæt skærm);
-      println("løb Button Clicked");
-    }
+
+  yogaButton = new Button(xS+200, hS+50, lS/2-30, hS/2, strokeColor, "Yoga", 45, 0, bRed, bGreen, bBlue);
+  yogaButton.ButtonUpdate();
+  if (yogaButton.isButtonPressed(mouseX, mouseY, mousePressed, yogaButton) == true) {
+    //Screen = (indsæt skærm);
+    println("Yoga Button Clicked");
   }
-  
-  fill(bRed, bGreen, bBlue);
-  rect(xS+5, hS+50, lS/2-30, hS/2);
-  fill(textColor);
-  textAlign(BASELINE, BASELINE);
-  textSize(45);
-  text("Yoga", xS+10, 90+hS);
-  if (mouseX >= xS+10 && mouseX <= xS+5+lS/2-30 && mouseY >= hS+50 && mouseY <= hS+50+hS/2) {
-    if (mousePressed) {
-      //Screen = (indsæt skærm);
-      println("Yoga Button Clicked");
-    }
+
+  runButton = new Button(xS+5, hS+50, lS/2-30, hS/2, strokeColor, "Run", 45, 0, bRed, bGreen, bBlue);
+  runButton.ButtonUpdate();
+  if (runButton.isButtonPressed(mouseX, mouseY, mousePressed, runButton) == true) {
+    //Screen = (indsæt skærm);
+    println("Run Button Clicked");
   }
 }

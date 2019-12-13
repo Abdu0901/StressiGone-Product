@@ -32,19 +32,6 @@ int bsDRed = 255, bsDGreen = 0, bsDBlue = 0;
 
 boolean darkMode = false;
 
-//Define name of buttons here
-Button settings;
-Button startButton;
-Button returnIconButton;
-Button homeIconButton;
-Button statisticsIconButton;
-Button shopIconButton;
-Button settingsIconButton;
-Button pointCounterButton;
-Button lessThanFiveButton;
-Button fiveToFifteenButton;
-Button overFifteenButton;
-
 void setup() {
   size(400, 600);
   StressiLogo = loadImage("StressiLogo.png");
@@ -69,14 +56,5 @@ void draw() {
     SettingsScreen();
   } else if (Screen == 5) {
     WorkOutSelection();
-  }
-}
-
-void mouseReleased() {
-  if (Screen == 0) {
-    StartScreenButtonsReleased();
-  }
-  if (Screen == 1) {
-    HomeScreenButtonsReleased();
   }
 }
