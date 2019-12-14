@@ -1,5 +1,8 @@
+//Displays name of activity at the top of screen
 String NameOfActivity = "";
+//Shows the current step
 int StepCounter = 1;
+//Defines what step number is the last step before an excersie can be completed
 int LastStep;
 
 Button previousStepButton;
@@ -61,6 +64,7 @@ void WorkOutScreen() {
   }
 }
 
+//If used reaches the last Step they can complete the workout
 void FinishWorkOut() {
   finishWorkOutButton = new Button(xM+300, yM-50, lM, hM, strokeColor, "", 45, 0, bRed, bGreen, bBlue);
   finishWorkOutButton.ButtonUpdate();
