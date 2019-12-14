@@ -33,7 +33,7 @@ void WorkOutScreen() {
   text(NameOfActivity, width/2, 20);
 
   //Go to previous step button
-  previousStepButton = new Button(0, 550, 100, 50, strokeColor, "P", 30, 0, bRed, bGreen, bBlue);
+  previousStepButton = new Button(0, 550, 100, 50, strokeColor, "", 30, 0, bRed, bGreen, bBlue);
   previousStepButton.ButtonUpdate();
   if (previousStepButton.isButtonPressed(mouseX, mouseY, mousePressed, previousStepButton) == true) {
     println("Previous Step Button Clicked");
@@ -41,9 +41,11 @@ void WorkOutScreen() {
       StepCounter --;
     }
   }
+  PreviousStepIcon.resize(100, 50);
+  image (PreviousStepIcon, 0, 550);
 
   //Go to next step button
-  nextStepButton = new Button(300, 550, 100, 50, strokeColor, "N", 30, 0, bRed, bGreen, bBlue);
+  nextStepButton = new Button(300, 550, 100, 50, strokeColor, "", 30, 0, bRed, bGreen, bBlue);
   nextStepButton.ButtonUpdate();
   if (nextStepButton.isButtonPressed(mouseX, mouseY, mousePressed, nextStepButton) == true) {
     println("Next Step Button Clicked");
@@ -51,6 +53,8 @@ void WorkOutScreen() {
       StepCounter ++;
     }
   }
+  NextStepIcon.resize(100, 50);
+  image (NextStepIcon, 300, 550);
 
   //Title of workout
   fill(textColor);

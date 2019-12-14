@@ -8,6 +8,8 @@ PImage ShopIcon;
 PImage SettingsIcon;
 PImage StatisticsIcon;
 PImage CheckMarkIcon;
+PImage PreviousStepIcon;
+PImage NextStepIcon;
 
 //A variable that displays the current selected screen
 int Screen = 0;
@@ -42,6 +44,8 @@ void setup() {
   SettingsIcon = loadImage("Settings Icon.png");
   StatisticsIcon = loadImage("Statistics Icon.png");
   CheckMarkIcon = loadImage("CheckMark.png");
+  PreviousStepIcon = loadImage("PreviousStepIcon.png");
+  NextStepIcon = loadImage("NextStepIcon.png");
 }
 
 void draw() {
