@@ -7,6 +7,7 @@ PImage HomeIcon;
 PImage ShopIcon;
 PImage SettingsIcon;
 PImage StatisticsIcon;
+PImage Hat;
 
 //A variable that displays the current selected screen
 int Screen = 0;
@@ -40,6 +41,7 @@ void setup() {
   ShopIcon = loadImage("Shop Icon.png");
   SettingsIcon = loadImage("Settings Icon.png");
   StatisticsIcon = loadImage("Statistics Icon.png");
+  Hat = loadImage("TopHat.jpg");
 }
 
 void draw() {

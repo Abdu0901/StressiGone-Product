@@ -49,6 +49,7 @@ void ShopScreen() {
   hatsButton = new Button(xS/2, 350, lS/2, hS/2, strokeColor, "Hats", 45, 0, bRed, bGreen, bBlue);
   hatsButton.ButtonUpdate();
   if (hatsButton.isButtonPressed(mouseX, mouseY, mousePressed, hatsButton) == true) {
+    image(Hat,160,120,80,40);
     println("Hats Button Clicked");
   }
 
