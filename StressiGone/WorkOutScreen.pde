@@ -6,6 +6,8 @@ int StepCounter = 1;
 int LastStep;
 PImage WorkOutPicture;
 
+String WorkOutStepText = "";
+
 Button previousStepButton;
 Button nextStepButton;
 Button finishWorkOutButton;
@@ -66,6 +68,12 @@ void WorkOutScreen() {
   //Workout picture
   WorkOutPicture.resize(350, 300);
   image (WorkOutPicture, 25, 65);
+
+  //Workout Step Text
+  fill(textColor);
+  textAlign(LEFT, TOP);
+  textSize(20);
+  text(WorkOutStepText, 25, 370, 350, 200);
 
   //Checks if the user has reached the last step in the workout and run adds the Finishworkout button
   if (StepCounter == LastStep) {

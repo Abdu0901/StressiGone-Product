@@ -31,10 +31,13 @@ void YogaWorkOut() {
   NameOfActivity = "Dolphin Plank";
   LastStep = 5;
   WorkOutPicture = DolphinPlank; 
+  WorkOutStepText = "Start in Dolphin Pose, knees bent. Then walk your feet back until your shoulders are directly over the elbows and your torso is parallel to the floor.";
+  //WorkOutStepText2 = "";
 }
 
 void RunningWorkOut() {
   NameOfActivity = "Running";
   LastStep = 2;
   WorkOutPicture = Running;
+  WorkOutStepText = "Start by walking for 1-2 minutes";
 }
