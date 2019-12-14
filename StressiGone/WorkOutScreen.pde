@@ -34,7 +34,9 @@ void WorkOutScreen() {
   previousStepButton.ButtonUpdate();
   if (previousStepButton.isButtonPressed(mouseX, mouseY, mousePressed, previousStepButton) == true) {
     println("Previous Step Button Clicked");
-    StepCounter --;
+    if (StepCounter > 1) {
+      StepCounter --;
+    }
   }
 
   //Go to next step button
@@ -42,7 +44,9 @@ void WorkOutScreen() {
   nextStepButton.ButtonUpdate();
   if (nextStepButton.isButtonPressed(mouseX, mouseY, mousePressed, nextStepButton) == true) {
     println("Next Step Button Clicked");
-    StepCounter ++;
+    if (StepCounter < LastStep) {
+      StepCounter ++;
+    }
   }
 
   //Title of workout
@@ -51,7 +55,7 @@ void WorkOutScreen() {
   textSize(30);
   text("Step" + StepCounter, width/2, 570);
 
-//Checks if the user has reached the last step in the workout and run adds the Finishworkout button
+  //Checks if the user has reached the last step in the workout and run adds the Finishworkout button
   if (StepCounter == LastStep) {
     FinishWorkOut();
   }
@@ -66,4 +70,6 @@ void FinishWorkOut() {
     StepCounter = 1;
     PointCounter = PointCounter +25;
   }
+  CheckMarkIcon.resize(50, 30);
+  image (CheckMarkIcon, xM+300, yM-50);
 }
