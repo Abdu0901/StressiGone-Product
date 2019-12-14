@@ -4,6 +4,7 @@ String NameOfActivity = "";
 int StepCounter = 1;
 //Defines what step number is the last step before an excersie can be completed
 int LastStep;
+PImage WorkOutPicture;
 
 Button previousStepButton;
 Button nextStepButton;
@@ -56,11 +57,15 @@ void WorkOutScreen() {
   NextStepIcon.resize(100, 50);
   image (NextStepIcon, 300, 550);
 
-  //Title of workout
+  //StepCounter
   fill(textColor);
   textAlign(CENTER, CENTER);
   textSize(30);
-  text("Step" + StepCounter, width/2, 570);
+  text("Step" + " " + StepCounter, width/2, 570);
+
+  //Workout picture
+  WorkOutPicture.resize(350, 300);
+  image (WorkOutPicture, 25, 0);
 
   //Checks if the user has reached the last step in the workout and run adds the Finishworkout button
   if (StepCounter == LastStep) {

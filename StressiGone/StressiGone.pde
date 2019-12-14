@@ -10,6 +10,8 @@ PImage StatisticsIcon;
 PImage CheckMarkIcon;
 PImage PreviousStepIcon;
 PImage NextStepIcon;
+PImage DolphinPlank;
+
 
 //A variable that displays the current selected screen
 int Screen = 0;
@@ -46,6 +48,7 @@ void setup() {
   CheckMarkIcon = loadImage("CheckMark.png");
   PreviousStepIcon = loadImage("PreviousStepIcon.png");
   NextStepIcon = loadImage("NextStepIcon.png");
+  DolphinPlank = loadImage("DolphinPlank.png");
 }
 
 void draw() {
