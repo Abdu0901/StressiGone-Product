@@ -1,8 +1,10 @@
 String NameOfActivity = "";
 int StepCounter = 1;
+int LastStep;
 
 Button previousStepButton;
 Button nextStepButton;
+Button finishWorkOutButton;
 
 void WorkOutScreen() {
   Screen = 6;
@@ -12,10 +14,11 @@ void WorkOutScreen() {
   if (returnIconButton.isButtonPressed(mouseX, mouseY, mousePressed, returnIconButton) == true) {
     println("Return Button Clicked");
     Screen = 5;
+    StepCounter = 1;
   }
-
   //Image for Return Button
   image (ReturnArrow, xM, yM-50);
+
   //Top Menu Lines
   stroke(bRed, bGreen, bBlue);
   line(0, 55, 400, 55);
@@ -47,4 +50,20 @@ void WorkOutScreen() {
   textAlign(CENTER, CENTER);
   textSize(30);
   text("Step" + StepCounter, width/2, 570);
+
+//Checks if the user has reached the last step in the workout and run adds the Finishworkout button
+  if (StepCounter == LastStep) {
+    FinishWorkOut();
+  }
+}
+
+void FinishWorkOut() {
+  finishWorkOutButton = new Button(xM+300, yM-50, lM, hM, strokeColor, "", 45, 0, bRed, bGreen, bBlue);
+  finishWorkOutButton.ButtonUpdate();
+  if (finishWorkOutButton.isButtonPressed(mouseX, mouseY, mousePressed, finishWorkOutButton) == true) {
+    println("Finish Workout Button Clicked");
+    Screen = 0;
+    StepCounter = 1;
+    PointCounter = PointCounter +25;
+  }
 }
