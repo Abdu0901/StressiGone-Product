@@ -7,6 +7,11 @@ int LastStep;
 PImage WorkOutPicture;
 
 String WorkOutStepText = "";
+String WorkOutStepText1 = "";
+String WorkOutStepText2 = "";
+String WorkOutStepText3 = "";
+String WorkOutStepText4 = "";
+String WorkOutStepText5 = "";
 
 Button previousStepButton;
 Button nextStepButton;
@@ -15,6 +20,7 @@ Button finishWorkOutButton;
 void WorkOutScreen() {
   Screen = 6;
   background (backGroundColor);
+  WorkOutTextChooser();
   //Return Icon Button
   returnIconButton.ButtonUpdate();
   if (returnIconButton.isButtonPressed(mouseX, mouseY, mousePressed, returnIconButton) == true) {
@@ -42,6 +48,7 @@ void WorkOutScreen() {
     println("Previous Step Button Clicked");
     if (StepCounter > 1) {
       StepCounter --;
+      WorkOutTextChooser();
     }
   }
   PreviousStepIcon.resize(100, 50);
@@ -54,6 +61,7 @@ void WorkOutScreen() {
     println("Next Step Button Clicked");
     if (StepCounter < LastStep) {
       StepCounter ++;
+      WorkOutTextChooser();
     }
   }
   NextStepIcon.resize(100, 50);
@@ -72,12 +80,27 @@ void WorkOutScreen() {
   //Workout Step Text
   fill(textColor);
   textAlign(LEFT, TOP);
-  textSize(20);
+  textSize(15);
   text(WorkOutStepText, 25, 370, 350, 200);
 
   //Checks if the user has reached the last step in the workout and run adds the Finishworkout button
   if (StepCounter == LastStep) {
     FinishWorkOut();
+  }
+}
+
+void WorkOutTextChooser(){
+  //Shows WorkOutStepText depending on which step is currently on
+  if (StepCounter == 1) {
+    WorkOutStepText = WorkOutStepText1;
+  } else if (StepCounter == 2) {
+    WorkOutStepText = WorkOutStepText2;
+  } else if (StepCounter == 3) {
+    WorkOutStepText = WorkOutStepText3;
+  } else if (StepCounter == 4) {
+    WorkOutStepText = WorkOutStepText4;
+  } else if (StepCounter == 5) {
+    WorkOutStepText = WorkOutStepText5;
   }
 }
 
