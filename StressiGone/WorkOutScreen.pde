@@ -1,5 +1,8 @@
+//Displays name of activity at the top of screen
 String NameOfActivity = "";
+//Shows the current step
 int StepCounter = 1;
+//Defines what step number is the last step before an excersie can be completed
 int LastStep;
 
 Button previousStepButton;
@@ -30,20 +33,28 @@ void WorkOutScreen() {
   text(NameOfActivity, width/2, 20);
 
   //Go to previous step button
-  previousStepButton = new Button(0, 550, 100, 50, strokeColor, "P", 30, 0, bRed, bGreen, bBlue);
+  previousStepButton = new Button(0, 550, 100, 50, strokeColor, "", 30, 0, bRed, bGreen, bBlue);
   previousStepButton.ButtonUpdate();
   if (previousStepButton.isButtonPressed(mouseX, mouseY, mousePressed, previousStepButton) == true) {
     println("Previous Step Button Clicked");
-    StepCounter --;
+    if (StepCounter > 1) {
+      StepCounter --;
+    }
   }
+  PreviousStepIcon.resize(100, 50);
+  image (PreviousStepIcon, 0, 550);
 
   //Go to next step button
-  nextStepButton = new Button(300, 550, 100, 50, strokeColor, "N", 30, 0, bRed, bGreen, bBlue);
+  nextStepButton = new Button(300, 550, 100, 50, strokeColor, "", 30, 0, bRed, bGreen, bBlue);
   nextStepButton.ButtonUpdate();
   if (nextStepButton.isButtonPressed(mouseX, mouseY, mousePressed, nextStepButton) == true) {
     println("Next Step Button Clicked");
-    StepCounter ++;
+    if (StepCounter < LastStep) {
+      StepCounter ++;
+    }
   }
+  NextStepIcon.resize(100, 50);
+  image (NextStepIcon, 300, 550);
 
   //Title of workout
   fill(textColor);
@@ -51,12 +62,13 @@ void WorkOutScreen() {
   textSize(30);
   text("Step" + StepCounter, width/2, 570);
 
-//Checks if the user has reached the last step in the workout and run adds the Finishworkout button
+  //Checks if the user has reached the last step in the workout and run adds the Finishworkout button
   if (StepCounter == LastStep) {
     FinishWorkOut();
   }
 }
 
+//If used reaches the last Step they can complete the workout
 void FinishWorkOut() {
   finishWorkOutButton = new Button(xM+300, yM-50, lM, hM, strokeColor, "", 45, 0, bRed, bGreen, bBlue);
   finishWorkOutButton.ButtonUpdate();
@@ -66,4 +78,6 @@ void FinishWorkOut() {
     StepCounter = 1;
     PointCounter = PointCounter +25;
   }
+  CheckMarkIcon.resize(50, 30);
+  image (CheckMarkIcon, xM+300, yM-50);
 }

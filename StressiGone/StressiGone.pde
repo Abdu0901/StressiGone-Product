@@ -7,6 +7,9 @@ PImage HomeIcon;
 PImage ShopIcon;
 PImage SettingsIcon;
 PImage StatisticsIcon;
+PImage CheckMarkIcon;
+PImage PreviousStepIcon;
+PImage NextStepIcon;
 PImage Hat;
 
 //A variable that displays the current selected screen
@@ -41,7 +44,10 @@ void setup() {
   ShopIcon = loadImage("Shop Icon.png");
   SettingsIcon = loadImage("Settings Icon.png");
   StatisticsIcon = loadImage("Statistics Icon.png");
-  Hat = loadImage("TopHat.jpg");
+  CheckMarkIcon = loadImage("CheckMark.png");
+  PreviousStepIcon = loadImage("PreviousStepIcon.png");
+  NextStepIcon = loadImage("NextStepIcon.png");
+    Hat = loadImage("TopHat.jpg");
 }
 
 void draw() {
