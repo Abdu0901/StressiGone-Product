@@ -13,14 +13,14 @@ void WorkOutSelection() {
   yogaButton = new Button(xS+200, hS+50, lS/2-30, hS/2, strokeColor, "Yoga", 45, 0, bRed, bGreen, bBlue);
   yogaButton.ButtonUpdate();
   if (yogaButton.isButtonPressed(mouseX, mouseY, mousePressed, yogaButton) == true) {
-    //Screen = (indsæt skærm);
+    Screen = 6;
     println("Yoga Button Clicked");
   }
 
   runButton = new Button(xS+5, hS+50, lS/2-30, hS/2, strokeColor, "Run", 45, 0, bRed, bGreen, bBlue);
   runButton.ButtonUpdate();
   if (runButton.isButtonPressed(mouseX, mouseY, mousePressed, runButton) == true) {
-    //Screen = (indsæt skærm);
+    Screen = 6;
     println("Run Button Clicked");
   }
 }

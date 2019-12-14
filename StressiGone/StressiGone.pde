@@ -56,5 +56,7 @@ void draw() {
     SettingsScreen();
   } else if (Screen == 5) {
     WorkOutSelection();
+  } else if (Screen == 6) {
+    WorkOutScreen();
   }
 }

@@ -13,8 +13,7 @@ Button pointCounterButton;
 
 void menuButtons() {
   //Top Menu Lines
-  stroke(strokeColor);
-  fill(bRed, bGreen, bBlue);
+  stroke(bRed,bGreen, bBlue);
   line(0, 55, 400, 55);
   line(0, 95, 400, 95);
   //ReturnButton

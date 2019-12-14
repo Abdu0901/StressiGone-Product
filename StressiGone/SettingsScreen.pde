@@ -131,7 +131,7 @@ void BlueTheme() {
 
 void GreenTheme() {
   bRed = 0; 
-  bGreen = 255; 
+  bGreen = 223; 
   bBlue = 0;
 }
 
