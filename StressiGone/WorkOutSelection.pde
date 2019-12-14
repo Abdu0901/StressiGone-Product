@@ -36,4 +36,5 @@ void YogaWorkOut() {
 void RunningWorkOut() {
   NameOfActivity = "Running";
   LastStep = 2;
+  WorkOutPicture = Running;
 }

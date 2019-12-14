@@ -65,7 +65,7 @@ void WorkOutScreen() {
 
   //Workout picture
   WorkOutPicture.resize(350, 300);
-  image (WorkOutPicture, 25, 0);
+  image (WorkOutPicture, 25, 65);
 
   //Checks if the user has reached the last step in the workout and run adds the Finishworkout button
   if (StepCounter == LastStep) {
