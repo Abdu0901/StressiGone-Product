@@ -7,14 +7,13 @@ class Button {
   int textSize;
   int textAlign;
   String buttonText;
-  
+
   boolean isButtonPressed(int mouseXPos, int mouseYPos, boolean isMousePressed, Button button) {
     if (mouseXPos > button.xPos && mouseXPos < button.xPos+button.wSize && mouseYPos > button.yPos && mouseYPos < button.yPos+button.hSize) {
       if (isMousePressed == true) {
         return true;
       }
     }
-    
     return false;
   }
 

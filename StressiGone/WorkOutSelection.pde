@@ -29,8 +29,10 @@ void WorkOutSelection() {
 
 void YogaWorkOut() {
   NameOfActivity = "Dolphin Plank";
+  LastStep = 5;
 }
 
 void RunningWorkOut() {
   NameOfActivity = "Running";
+  LastStep = 2;
 }
