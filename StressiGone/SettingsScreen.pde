@@ -100,7 +100,7 @@ void DarkMode() {
   strokeColor = 255;
   //Highlights DarkMakes function with Green
   bsDRed = 0; 
-  bsDGreen = 255; 
+  bsDGreen = 231; 
   bsDBlue = 0;
   //Removes Green from LightMode and replaces it with Red
   bsLRed = 255; 
@@ -119,7 +119,7 @@ void LightMode() {
   bsDBlue = 0;
   //Removes Green from DarkMode and replaces it with Red
   bsLRed = 0; 
-  bsLGreen = 255; 
+  bsLGreen = 231; 
   bsLBlue = 0;
 }
 
@@ -131,7 +131,7 @@ void BlueTheme() {
 
 void GreenTheme() {
   bRed = 0; 
-  bGreen = 223; 
+  bGreen = 231; 
   bBlue = 0;
 }
 
