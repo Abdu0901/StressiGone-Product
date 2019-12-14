@@ -9,10 +9,19 @@ void ShopScreen() {
   Screen = 3;
   background (backGroundColor);
   menuButtons();
+  text("Shop", width/2, 0);
+  fill(255);
+  line(170,325,200,275);
+  line(200,275,230,325);
+  line(200,275,200,190);
+  line(200,240,250,200);
+  line(200,240,150,200);
+  ellipse(200,175,50,50);
+  
   fill(textColor);
   textAlign(CENTER, TOP);
   textSize(50);
-  text("Shop", width/2, 0);
+
 
   shoesButton = new Button(xS/2, 500, lS/2, hS/2, strokeColor, "Shoes", 45, 0, bRed, bGreen, bBlue);
   shoesButton.ButtonUpdate();
