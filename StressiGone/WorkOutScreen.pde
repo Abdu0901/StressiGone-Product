@@ -13,6 +13,8 @@ String WorkOutStepText3 = "";
 String WorkOutStepText4 = "";
 String WorkOutStepText5 = "";
 
+int StepsAmount = 0;
+
 Button previousStepButton;
 Button nextStepButton;
 Button finishWorkOutButton;
@@ -49,6 +51,7 @@ void WorkOutScreen() {
     if (StepCounter > 1) {
       StepCounter --;
       WorkOutTextChooser();
+      StepsAmount++;
     }
   }
   PreviousStepIcon.resize(100, 50);
@@ -62,6 +65,7 @@ void WorkOutScreen() {
     if (StepCounter < LastStep) {
       StepCounter ++;
       WorkOutTextChooser();
+      StepsAmount++;
     }
   }
   NextStepIcon.resize(100, 50);
@@ -113,6 +117,7 @@ void FinishWorkOut() {
     Screen = 0;
     StepCounter = 1;
     PointCounter = PointCounter +25;
+    WorkOutsFinished ++;
   }
   CheckMarkIcon.resize(50, 30);
   image (CheckMarkIcon, xM+300, yM-50);
