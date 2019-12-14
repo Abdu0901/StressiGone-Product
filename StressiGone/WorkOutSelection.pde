@@ -14,6 +14,7 @@ void WorkOutSelection() {
   yogaButton.ButtonUpdate();
   if (yogaButton.isButtonPressed(mouseX, mouseY, mousePressed, yogaButton) == true) {
     Screen = 6;
+    YogaWorkOut();
     println("Yoga Button Clicked");
   }
 
@@ -21,6 +22,15 @@ void WorkOutSelection() {
   runButton.ButtonUpdate();
   if (runButton.isButtonPressed(mouseX, mouseY, mousePressed, runButton) == true) {
     Screen = 6;
+    RunningWorkOut();
     println("Run Button Clicked");
   }
+}
+
+void YogaWorkOut() {
+  NameOfActivity = "Dolphin Plank";
+}
+
+void RunningWorkOut() {
+  NameOfActivity = "Running";
 }
