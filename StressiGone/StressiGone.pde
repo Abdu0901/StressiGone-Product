@@ -15,6 +15,7 @@ PImage Hat;
 PImage Running;
 PImage Pants;
 PImage Shirt;
+PImage glass;
 
 
 //A variable that displays the current selected screen
@@ -57,6 +58,7 @@ void setup() {
   Running = loadImage("Running.png");
   Pants = loadImage("Pants.png");
   Shirt = loadImage("Shirt.jpg");
+  glass = loadImage("glases.jpg");
 }
 
 void draw() {

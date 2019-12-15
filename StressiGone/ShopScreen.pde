@@ -31,6 +31,7 @@ void ShopScreen() {
   glasesButton = new Button(xS+170, 500, lS/2, hS/2, strokeColor, "Glases", 45, 0, bRed, bGreen, bBlue);
   glasesButton.ButtonUpdate();
   if (glasesButton.isButtonPressed(mouseX, mouseY, mousePressed, glasesButton) == true) {
+    image(glass,160,160,80,40);
     println("Glases Button Clicked");
   }
 
