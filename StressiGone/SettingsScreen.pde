@@ -21,7 +21,6 @@ void SettingsScreen() {
   darkModeBox.ButtonUpdate();
   if (darkModeBox.isButtonPressed(mouseX, mouseY, mousePressed, darkModeBox) == true) {
     DarkMode();
-    println("Dark Mode Enabled");
   }
 
   //Light Mode Box
@@ -29,7 +28,6 @@ void SettingsScreen() {
   lightModeBox.ButtonUpdate();
   if (lightModeBox.isButtonPressed(mouseX, mouseY, mousePressed, lightModeBox) == true) {
     LightMode();
-    println("Light Mode Enabled");
   }
 
   //Brightness Mode Text
