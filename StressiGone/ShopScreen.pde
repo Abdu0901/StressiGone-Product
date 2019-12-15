@@ -57,6 +57,7 @@ void ShopScreen() {
   shirtsButton = new Button(xS+170, 350, lS/2, hS/2, strokeColor, "Shirts", 45, 0, bRed, bGreen, bBlue);
   shirtsButton.ButtonUpdate();
   if (shirtsButton.isButtonPressed(mouseX, mouseY, mousePressed, shirtsButton) == true) {
+    image(Shirt,130,200,140,60);
     println("Shirts Button Clicked");
   }
 }
