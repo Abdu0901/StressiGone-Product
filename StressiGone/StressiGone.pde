@@ -54,11 +54,11 @@ void setup() {
   PreviousStepIcon = loadImage("PreviousStepIcon.png");
   NextStepIcon = loadImage("NextStepIcon.png");
   DolphinPlank = loadImage("DolphinPlank.png");
-  Hat = loadImage("TopHat.jpg");
+  Hat = loadImage("Hat.png");
   Running = loadImage("Running.png");
   Pants = loadImage("Pants.png");
   Shirt = loadImage("Shirt.jpg");
-  glass = loadImage("glases.jpg");
+  glass = loadImage("glass.png");
 }
 
 void draw() {

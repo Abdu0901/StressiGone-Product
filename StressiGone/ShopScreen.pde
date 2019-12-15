@@ -31,7 +31,7 @@ void ShopScreen() {
   glasesButton = new Button(xS+170, 500, lS/2, hS/2, strokeColor, "Glases", 45, 0, bRed, bGreen, bBlue);
   glasesButton.ButtonUpdate();
   if (glasesButton.isButtonPressed(mouseX, mouseY, mousePressed, glasesButton) == true) {
-    image(glass,160,160,80,40);
+    image(glass,180,165,40,20);
     println("Glases Button Clicked");
   }
 
@@ -44,14 +44,14 @@ void ShopScreen() {
   pantsButton = new Button(xS/2, 425, lS/2, hS/2, strokeColor, "Pants", 45, 0, bRed, bGreen, bBlue);
   pantsButton.ButtonUpdate();
   if (pantsButton.isButtonPressed(mouseX, mouseY, mousePressed, pantsButton) == true) {
-    image(Pants,130,265,140,60);
+    image(Pants,130,255,140,80);
     println("Pants Button Clicked");
   }
 
   hatsButton = new Button(xS/2, 350, lS/2, hS/2, strokeColor, "Hats", 45, 0, bRed, bGreen, bBlue);
   hatsButton.ButtonUpdate();
   if (hatsButton.isButtonPressed(mouseX, mouseY, mousePressed, hatsButton) == true) {
-    image(Hat,160,120,80,40);
+    image(Hat,180,120,40,40);
     println("Hats Button Clicked");
   }
 
