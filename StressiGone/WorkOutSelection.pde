@@ -15,7 +15,6 @@ void WorkOutSelection() {
   if (yogaButton.isButtonPressed(mouseX, mouseY, mousePressed, yogaButton) == true) {
     Screen = 6;
     YogaWorkOut();
-    println("Yoga Button Clicked");
   }
 
   runButton = new Button(xS+5, hS+50, lS/2-30, hS/2, strokeColor, "Run", 45, 0, bRed, bGreen, bBlue);
@@ -23,7 +22,6 @@ void WorkOutSelection() {
   if (runButton.isButtonPressed(mouseX, mouseY, mousePressed, runButton) == true) {
     Screen = 6;
     RunningWorkOut();
-    println("Run Button Clicked");
   }
 }
 

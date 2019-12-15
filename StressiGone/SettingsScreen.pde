@@ -49,7 +49,6 @@ void SettingsScreen() {
   blueThemeBox.ButtonUpdate();
   if (blueThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, blueThemeBox) == true) {
     BlueTheme();
-    println("BlueTheme Enabled");
   }
 
   //Green Theme Box
@@ -57,7 +56,6 @@ void SettingsScreen() {
   greenThemeBox.ButtonUpdate();
   if (greenThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, greenThemeBox) == true) {
     GreenTheme();
-    println("GreenTheme Enabled");
   }
 
   //Violet Theme Box
@@ -65,7 +63,6 @@ void SettingsScreen() {
   violetThemeBox.ButtonUpdate();
   if (violetThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, violetThemeBox) == true) {
     VioletTheme();
-    println("VioletTheme Enabled");
   }
 
   //Pink Theme Box
@@ -73,7 +70,6 @@ void SettingsScreen() {
   pinkThemeBox.ButtonUpdate();
   if (pinkThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, pinkThemeBox) == true) {
     PinkTheme();
-    println("PinkTheme Enabled");
   }
 
   //Grey Theme Box
@@ -81,7 +77,6 @@ void SettingsScreen() {
   greyThemeBox.ButtonUpdate();
   if (greyThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, greyThemeBox) == true) {
     GreyTheme();
-    println("GreyTheme Enabled");
   }
 
   //Yellow Theme Box
@@ -89,7 +84,6 @@ void SettingsScreen() {
   yellowThemeBox.ButtonUpdate();
   if (yellowThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, yellowThemeBox) == true) {
     YellowTheme();
-    println("YellowTheme Enabled");
   }
 }
 

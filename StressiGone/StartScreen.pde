@@ -18,13 +18,11 @@ void StartScreen() {
   startButton.ButtonUpdate();
   if (startButton.isButtonPressed(mouseX, mouseY, mousePressed, startButton) == true) {
     Screen = 1;
-    println("Start Button Clicked");
   }
   //SettingsButton
   settings = new Button(xS, yS+150, lS, hS, strokeColor, "Settings", 75, 0, bRed, bGreen, bBlue);
   settings.ButtonUpdate();
   if (settings.isButtonPressed(mouseX, mouseY, mousePressed, settings) == true) {
     Screen = 4;
-    println("Settings Button Clicked");
   }
 }

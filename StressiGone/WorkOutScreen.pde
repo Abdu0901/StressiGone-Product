@@ -26,7 +26,6 @@ void WorkOutScreen() {
   //Return Icon Button
   returnIconButton.ButtonUpdate();
   if (returnIconButton.isButtonPressed(mouseX, mouseY, mousePressed, returnIconButton) == true) {
-    println("Return Button Clicked");
     Screen = 5;
     StepCounter = 1;
   }
@@ -47,7 +46,6 @@ void WorkOutScreen() {
   previousStepButton = new Button(0, 550, 100, 50, strokeColor, "", 30, 0, bRed, bGreen, bBlue);
   previousStepButton.ButtonUpdate();
   if (previousStepButton.isButtonPressed(mouseX, mouseY, mousePressed, previousStepButton) == true) {
-    println("Previous Step Button Clicked");
     if (StepCounter > 1) {
       StepCounter --;
       WorkOutTextChooser();
@@ -61,7 +59,6 @@ void WorkOutScreen() {
   nextStepButton = new Button(300, 550, 100, 50, strokeColor, "", 30, 0, bRed, bGreen, bBlue);
   nextStepButton.ButtonUpdate();
   if (nextStepButton.isButtonPressed(mouseX, mouseY, mousePressed, nextStepButton) == true) {
-    println("Next Step Button Clicked");
     if (StepCounter < LastStep) {
       StepCounter ++;
       WorkOutTextChooser();
@@ -113,7 +110,6 @@ void FinishWorkOut() {
   finishWorkOutButton = new Button(xM+300, yM-50, lM, hM, strokeColor, "", 45, 0, bRed, bGreen, bBlue);
   finishWorkOutButton.ButtonUpdate();
   if (finishWorkOutButton.isButtonPressed(mouseX, mouseY, mousePressed, finishWorkOutButton) == true) {
-    println("Finish Workout Button Clicked");
     Screen = 0;
     StepCounter = 1;
     PointCounter = PointCounter +25;
