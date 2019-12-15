@@ -1,14 +1,14 @@
-Button shoesButton;
 Button glasesButton;
-Button glovesButton;
 Button hatsButton;
 Button shirtsButton;
 Button pantsButton;
+Button clearCosmetics;
 
 PImage EmptyPic;
 PImage EmptyPic1;
 PImage EmptyPic2;
 PImage EmptyPic3;
+PImage EmptyPic4;
 
 void ShopScreen() {
   Screen = 3;
@@ -27,55 +27,56 @@ void ShopScreen() {
   text("Shop", width/2, 0);
 
 
-  shoesButton = new Button(xS/2, 500, lS/2, hS/2, strokeColor, "Shoes", 45, 0, bRed, bGreen, bBlue);
-  shoesButton.ButtonUpdate();
-  if (shoesButton.isButtonPressed(mouseX, mouseY, mousePressed, shoesButton) == true) {
-    println("Shoes Button Clicked");
+  clearCosmetics = new Button(xS/2, 500, lS+45, hS/2, strokeColor, "Clear All", 45, 0, bRed, bGreen, bBlue);
+  clearCosmetics.ButtonUpdate();
+  if (clearCosmetics.isButtonPressed(mouseX, mouseY, mousePressed, clearCosmetics) == true) {
+    ClearCosmetics();
   }
 
-  glasesButton = new Button(xS+170, 500, lS/2, hS/2, strokeColor, "Glases", 45, 0, bRed, bGreen, bBlue);
+  glasesButton = new Button(xS+170, 425, lS/2, hS/2, strokeColor, "Glases", 45, 0, bRed, bGreen, bBlue);
   glasesButton.ButtonUpdate();
   if (glasesButton.isButtonPressed(mouseX, mouseY, mousePressed, glasesButton) == true) {
     image(glass, 180, 165, 40, 20);
-    EmptyPic = glass;
+    EmptyPic1 = glass;
   }
   //Displays selected glass
-  EmptyPic.resize(40, 20);
-  image (EmptyPic, 180, 165);
-
-  glovesButton = new Button(xS+170, 425, lS/2, hS/2, strokeColor, "Gloves", 45, 0, bRed, bGreen, bBlue);
-  glovesButton.ButtonUpdate();
-  if (glovesButton.isButtonPressed(mouseX, mouseY, mousePressed, glovesButton) == true) {
-    println("Gloves Button Clicked");
-  }
+  EmptyPic1.resize(40, 20);
+  image (EmptyPic1, 180, 165);
 
   pantsButton = new Button(xS/2, 425, lS/2, hS/2, strokeColor, "Pants", 45, 0, bRed, bGreen, bBlue);
   pantsButton.ButtonUpdate();
   if (pantsButton.isButtonPressed(mouseX, mouseY, mousePressed, pantsButton) == true) {
     image(Pants, 130, 255, 140, 80);
-    EmptyPic1 = Pants;
+    EmptyPic2 = Pants;
   }
   //Displays selected pants
-  EmptyPic1.resize(140, 80);
-  image (EmptyPic1, 130, 255);
+  EmptyPic2.resize(140, 80);
+  image (EmptyPic2, 130, 255);
 
   hatsButton = new Button(xS/2, 350, lS/2, hS/2, strokeColor, "Hats", 45, 0, bRed, bGreen, bBlue);
   hatsButton.ButtonUpdate();
   if (hatsButton.isButtonPressed(mouseX, mouseY, mousePressed, hatsButton) == true) {
     image(Hat, 180, 120, 40, 40);
-    EmptyPic2 = Hat;
+    EmptyPic3 = Hat;
   }
   //Displays selected hat
-  EmptyPic2.resize(40, 40);
-  image (EmptyPic2, 180, 120);
+  EmptyPic3.resize(40, 40);
+  image (EmptyPic3, 180, 120);
 
   shirtsButton = new Button(xS+170, 350, lS/2, hS/2, strokeColor, "Shirts", 45, 0, bRed, bGreen, bBlue);
   shirtsButton.ButtonUpdate();
   if (shirtsButton.isButtonPressed(mouseX, mouseY, mousePressed, shirtsButton) == true) {
     image(Shirt, 130, 200, 140, 60);
-    EmptyPic3 = Shirt;
+    EmptyPic4 = Shirt;
   }
   //Displays selected Shirt
-  EmptyPic3.resize(140, 60);
-  image (EmptyPic3, 130, 200);
+  EmptyPic4.resize(140, 60);
+  image (EmptyPic4, 130, 200);
+}
+
+void ClearCosmetics() {
+  EmptyPic1 = EmptyPic;
+  EmptyPic2 = EmptyPic;
+  EmptyPic3 = EmptyPic;
+  EmptyPic4 = EmptyPic;
 }

@@ -63,6 +63,7 @@ void setup() {
   EmptyPic1 = loadImage("EmptyPic.png");
   EmptyPic2 = loadImage("EmptyPic.png");
   EmptyPic3 = loadImage("EmptyPic.png");
+  EmptyPic4 = loadImage("EmptyPic.png");
 }
 
 void draw() {
