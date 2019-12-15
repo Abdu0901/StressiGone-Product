@@ -59,6 +59,10 @@ void setup() {
   Pants = loadImage("Pants.png");
   Shirt = loadImage("Shirt.jpg");
   glass = loadImage("glass.png");
+  EmptyPic = loadImage("EmptyPic.png");
+  EmptyPic1 = loadImage("EmptyPic.png");
+  EmptyPic2 = loadImage("EmptyPic.png");
+  EmptyPic3 = loadImage("EmptyPic.png");
 }
 
 void draw() {
