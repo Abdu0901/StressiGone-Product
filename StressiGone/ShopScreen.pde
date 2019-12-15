@@ -43,6 +43,7 @@ void ShopScreen() {
   pantsButton = new Button(xS/2, 425, lS/2, hS/2, strokeColor, "Pants", 45, 0, bRed, bGreen, bBlue);
   pantsButton.ButtonUpdate();
   if (pantsButton.isButtonPressed(mouseX, mouseY, mousePressed, pantsButton) == true) {
+    image(Pants,130,265,140,60);
     println("Pants Button Clicked");
   }
 

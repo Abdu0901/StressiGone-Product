@@ -13,6 +13,7 @@ PImage NextStepIcon;
 PImage DolphinPlank;
 PImage Hat;
 PImage Running;
+PImage Pants;
 
 
 //A variable that displays the current selected screen
@@ -53,6 +54,7 @@ void setup() {
   DolphinPlank = loadImage("DolphinPlank.png");
   Hat = loadImage("TopHat.jpg");
   Running = loadImage("Running.png");
+  Pants = loadImage("Pants.png");
 }
 
 void draw() {
