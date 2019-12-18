@@ -11,6 +11,8 @@ PImage EmptyPic3;
 PImage EmptyPic4;
 
 void ShopScreen() {
+  boolean mouseJustPressed = mousePressed & !lastMousePressed;
+  lastMousePressed = mousePressed;
   Screen = 3;
   background (backGroundColor);
   menuButtons();
@@ -29,13 +31,13 @@ void ShopScreen() {
 
   clearCosmetics = new Button(xS/2, 500, lS+45, hS/2, strokeColor, "Clear All", 45, 0, bRed, bGreen, bBlue);
   clearCosmetics.ButtonUpdate();
-  if (clearCosmetics.isButtonPressed(mouseX, mouseY, mousePressed, clearCosmetics) == true) {
+  if (clearCosmetics.isButtonPressed(mouseX, mouseY, mouseJustPressed, clearCosmetics) == true) {
     ClearCosmetics();
   }
 
   glasesButton = new Button(xS+170, 425, lS/2, hS/2, strokeColor, "Glases", 45, 0, bRed, bGreen, bBlue);
   glasesButton.ButtonUpdate();
-  if (glasesButton.isButtonPressed(mouseX, mouseY, mousePressed, glasesButton) == true) {
+  if (glasesButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, glasesButton) == true) {
     image(glass, 180, 165, 40, 20);
     EmptyPic1 = glass;
   }
@@ -45,7 +47,7 @@ void ShopScreen() {
 
   pantsButton = new Button(xS/2, 425, lS/2, hS/2, strokeColor, "Pants", 45, 0, bRed, bGreen, bBlue);
   pantsButton.ButtonUpdate();
-  if (pantsButton.isButtonPressed(mouseX, mouseY, mousePressed, pantsButton) == true) {
+  if (pantsButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, pantsButton) == true) {
     image(Pants, 130, 255, 140, 80);
     EmptyPic2 = Pants;
   }
@@ -55,7 +57,7 @@ void ShopScreen() {
 
   hatsButton = new Button(xS/2, 350, lS/2, hS/2, strokeColor, "Hats", 45, 0, bRed, bGreen, bBlue);
   hatsButton.ButtonUpdate();
-  if (hatsButton.isButtonPressed(mouseX, mouseY, mousePressed, hatsButton) == true) {
+  if (hatsButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, hatsButton) == true) {
     image(Hat, 180, 120, 40, 40);
     EmptyPic3 = Hat;
   }
@@ -65,7 +67,7 @@ void ShopScreen() {
 
   shirtsButton = new Button(xS+170, 350, lS/2, hS/2, strokeColor, "Shirts", 45, 0, bRed, bGreen, bBlue);
   shirtsButton.ButtonUpdate();
-  if (shirtsButton.isButtonPressed(mouseX, mouseY, mousePressed, shirtsButton) == true) {
+  if (shirtsButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, shirtsButton) == true) {
     image(Shirt, 130, 200, 140, 60);
     EmptyPic4 = Shirt;
   }

@@ -22,10 +22,12 @@ Button finishWorkOutButton;
 void WorkOutScreen() {
   Screen = 6;
   background (backGroundColor);
+  boolean mouseJustPressed = mousePressed & !lastMousePressed;
+  lastMousePressed = mousePressed;
   WorkOutTextChooser();
   //Return Icon Button
   returnIconButton.ButtonUpdate();
-  if (returnIconButton.isButtonPressed(mouseX, mouseY, mousePressed, returnIconButton) == true) {
+  if (returnIconButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, returnIconButton) == true) {
     Screen = 5;
     StepCounter = 1;
   }
@@ -45,7 +47,7 @@ void WorkOutScreen() {
   //Go to previous step button
   previousStepButton = new Button(0, 550, 100, 50, strokeColor, "", 30, 0, bRed, bGreen, bBlue);
   previousStepButton.ButtonUpdate();
-  if (previousStepButton.isButtonPressed(mouseX, mouseY, mousePressed, previousStepButton) == true) {
+  if (previousStepButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, previousStepButton) == true) {
     if (StepCounter > 1) {
       StepCounter --;
       WorkOutTextChooser();
@@ -58,7 +60,7 @@ void WorkOutScreen() {
   //Go to next step button
   nextStepButton = new Button(300, 550, 100, 50, strokeColor, "", 30, 0, bRed, bGreen, bBlue);
   nextStepButton.ButtonUpdate();
-  if (nextStepButton.isButtonPressed(mouseX, mouseY, mousePressed, nextStepButton) == true) {
+  if (nextStepButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, nextStepButton) == true) {
     if (StepCounter < LastStep) {
       StepCounter ++;
       WorkOutTextChooser();
@@ -90,7 +92,7 @@ void WorkOutScreen() {
   }
 }
 
-void WorkOutTextChooser(){
+void WorkOutTextChooser() {
   //Shows WorkOutStepText depending on which step is currently on
   if (StepCounter == 1) {
     WorkOutStepText = WorkOutStepText1;
@@ -107,9 +109,11 @@ void WorkOutTextChooser(){
 
 //If used reaches the last Step they can complete the workout
 void FinishWorkOut() {
+  boolean mouseJustPressed = mousePressed & !lastMousePressed;
+  lastMousePressed = mousePressed;
   finishWorkOutButton = new Button(xM+300, yM-50, lM, hM, strokeColor, "", 45, 0, bRed, bGreen, bBlue);
   finishWorkOutButton.ButtonUpdate();
-  if (finishWorkOutButton.isButtonPressed(mouseX, mouseY, mousePressed, finishWorkOutButton) == true) {
+  if (finishWorkOutButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, finishWorkOutButton) == true) {
     Screen = 0;
     StepCounter = 1;
     PointCounter = PointCounter +25;

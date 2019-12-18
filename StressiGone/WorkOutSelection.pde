@@ -2,6 +2,8 @@ Button runButton;
 Button yogaButton;
 
 void WorkOutSelection() {
+  boolean mouseJustPressed = mousePressed & !lastMousePressed;
+  lastMousePressed = mousePressed;
   Screen = 5;
   background (backGroundColor);
   menuButtons();
@@ -12,14 +14,14 @@ void WorkOutSelection() {
 
   yogaButton = new Button(xS+200, hS+50, lS/2-30, hS/2, strokeColor, "Yoga", 45, 0, bRed, bGreen, bBlue);
   yogaButton.ButtonUpdate();
-  if (yogaButton.isButtonPressed(mouseX, mouseY, mousePressed, yogaButton) == true) {
+  if (yogaButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, yogaButton) == true) {
     Screen = 6;
     YogaWorkOut();
   }
 
   runButton = new Button(xS+5, hS+50, lS/2-30, hS/2, strokeColor, "Run", 45, 0, bRed, bGreen, bBlue);
   runButton.ButtonUpdate();
-  if (runButton.isButtonPressed(mouseX, mouseY, mousePressed, runButton) == true) {
+  if (runButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, runButton) == true) {
     Screen = 6;
     RunningWorkOut();
   }

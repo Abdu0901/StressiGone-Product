@@ -17,6 +17,8 @@ PImage Pants;
 PImage Shirt;
 PImage glass;
 
+//Definin variables needed or button check
+boolean lastMousePressed = false;
 
 //A variable that displays the current selected screen
 int Screen = 0;

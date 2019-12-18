@@ -12,8 +12,10 @@ Button settingsIconButton;
 Button pointCounterButton;
 
 void menuButtons() {
+  boolean mouseJustPressed = mousePressed & !lastMousePressed;
+  lastMousePressed = mousePressed;
   //Top Menu Lines
-  stroke(bRed,bGreen, bBlue);
+  stroke(bRed, bGreen, bBlue);
   line(0, 55, 400, 55);
   line(0, 95, 400, 95);
   //ReturnButton

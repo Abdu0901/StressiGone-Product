@@ -8,6 +8,8 @@ Button greyThemeBox;
 Button yellowThemeBox;
 
 void SettingsScreen() {
+  boolean mouseJustPressed = mousePressed & !lastMousePressed;
+  lastMousePressed = mousePressed;
   Screen = 4;
   background (backGroundColor);
   menuButtons();
@@ -19,14 +21,14 @@ void SettingsScreen() {
   //Dark Mode Box
   darkModeBox = new Button(width/2+50, 200-10, 50, 50, strokeColor, "D", 30, 0, bsDRed, bsDGreen, bsDBlue);
   darkModeBox.ButtonUpdate();
-  if (darkModeBox.isButtonPressed(mouseX, mouseY, mousePressed, darkModeBox) == true) {
+  if (darkModeBox.isButtonPressed(mouseX, mouseY, mouseJustPressed, darkModeBox) == true) {
     DarkMode();
   }
 
   //Light Mode Box
   lightModeBox = new Button(width/2+100, 200-10, 50, 50, strokeColor, "L", 30, 0, bsLRed, bsLGreen, bsLBlue);
   lightModeBox.ButtonUpdate();
-  if (lightModeBox.isButtonPressed(mouseX, mouseY, mousePressed, lightModeBox) == true) {
+  if (lightModeBox.isButtonPressed(mouseX, mouseY, mouseJustPressed, lightModeBox) == true) {
     LightMode();
   }
 
@@ -45,42 +47,42 @@ void SettingsScreen() {
   //Blue Theme Box
   blueThemeBox = new Button(20, 300, 50, 50, strokeColor, "", 1, 0, 0, 166, 255);
   blueThemeBox.ButtonUpdate();
-  if (blueThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, blueThemeBox) == true) {
+  if (blueThemeBox.isButtonPressed(mouseX, mouseY, mouseJustPressed, blueThemeBox) == true) {
     BlueTheme();
   }
 
   //Green Theme Box
   greenThemeBox = new Button(82, 300, 50, 50, strokeColor, "", 1, 0, 0, 255, 0);
   greenThemeBox.ButtonUpdate();
-  if (greenThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, greenThemeBox) == true) {
+  if (greenThemeBox.isButtonPressed(mouseX, mouseY, mouseJustPressed, greenThemeBox) == true) {
     GreenTheme();
   }
 
   //Violet Theme Box
   violetThemeBox = new Button(144, 300, 50, 50, strokeColor, "", 1, 0, 238, 130, 238);
   violetThemeBox.ButtonUpdate();
-  if (violetThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, violetThemeBox) == true) {
+  if (violetThemeBox.isButtonPressed(mouseX, mouseY, mouseJustPressed, violetThemeBox) == true) {
     VioletTheme();
   }
 
   //Pink Theme Box
   pinkThemeBox = new Button(206, 300, 50, 50, strokeColor, "", 1, 0, 255, 105, 180);
   pinkThemeBox.ButtonUpdate();
-  if (pinkThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, pinkThemeBox) == true) {
+  if (pinkThemeBox.isButtonPressed(mouseX, mouseY, mouseJustPressed, pinkThemeBox) == true) {
     PinkTheme();
   }
 
   //Grey Theme Box
   greyThemeBox = new Button(268, 300, 50, 50, strokeColor, "", 1, 0, 211, 211, 211);
   greyThemeBox.ButtonUpdate();
-  if (greyThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, greyThemeBox) == true) {
+  if (greyThemeBox.isButtonPressed(mouseX, mouseY, mouseJustPressed, greyThemeBox) == true) {
     GreyTheme();
   }
 
   //Yellow Theme Box
   yellowThemeBox = new Button(330, 300, 50, 50, strokeColor, "", 1, 0, 255, 255, 0);
   yellowThemeBox.ButtonUpdate();
-  if (yellowThemeBox.isButtonPressed(mouseX, mouseY, mousePressed, yellowThemeBox) == true) {
+  if (yellowThemeBox.isButtonPressed(mouseX, mouseY, mouseJustPressed, yellowThemeBox) == true) {
     YellowTheme();
   }
 }
