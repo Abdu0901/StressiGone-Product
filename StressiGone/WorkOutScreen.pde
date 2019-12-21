@@ -109,11 +109,9 @@ void WorkOutTextChooser() {
 
 //If used reaches the last Step they can complete the workout
 void FinishWorkOut() {
-  boolean mouseJustPressed = mousePressed & !lastMousePressed;
-  lastMousePressed = mousePressed;
   finishWorkOutButton = new Button(xM+300, yM-50, lM, hM, strokeColor, "", 45, 0, bRed, bGreen, bBlue);
   finishWorkOutButton.ButtonUpdate();
-  if (finishWorkOutButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, finishWorkOutButton) == true) {
+  if (finishWorkOutButton.isButtonPressed(mouseX, mouseY, mousePressed, finishWorkOutButton) == true) {
     Screen = 0;
     StepCounter = 1;
     PointCounter = PointCounter +25;
